@@ -1,0 +1,1 @@
+README: This directory collects intermediate results. This can save time when running workflows. In this way you don't need to start from scratch.
