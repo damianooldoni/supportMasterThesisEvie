@@ -25,18 +25,18 @@ tic()
 vlaams_brabant_circles <- qgis_run_algorithm(
   "native:buffer",
   INPUT = vlaams_brabant,
-  SEGMENTS = 10, # default value: 5
+  SEGMENTS = 5, # default value: 5
   DISTANCE = 250, # distance in meter
   DISSOLVE = FALSE
 )
 vlaams_brabant_circles <- sf::st_as_sf(vlaams_brabant_circles)
 toc()
 
-# # buffers maken via sf (hieronder) duurt 342s, tegen 190 van qgisprocess (boven)
+# Creating buffers via sf (here below) takes longer
 # tic()
 # vlaams_brabant_circles <- sf::st_buffer(x = vlaams_brabant, 
 #                                         dist = 250, 
-#                                         nQuadSegs = 10
+#                                         nQuadSegs = 5
 # )
 # toc()
 
