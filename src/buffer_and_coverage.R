@@ -20,7 +20,7 @@ land_use <- terra::rast("./data/raw/Landgebruikskaart NARA-T 2014_niv21.tif")
 
 # Create buffers of 250m (default is 5 line segments used to approximate a
 # quarter circle when creating rounded offsets)
-#For higher precision: increase SEGMENTS arg value
+# For higher precision: increase SEGMENTS arg value
 tic()
 vlaams_brabant_circles <- qgis_run_algorithm(
   "native:buffer",
